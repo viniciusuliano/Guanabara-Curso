@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function mostra(texto){
+        document.write(texto + '<br>')
+    }
+    
+    function jogo(n){
+        var sorteia = Math.round(Math.random() * n)
+        return sorteia
+    } 
+    
+    for(var tentativas = 0; tentativas < 5; tentativas++){
+        var insere = parseInt(prompt("Insira um numero"))
+        var sorteio = jogo(1)
+        if(insere == sorteio){
+            mostra('ACERTOU ' + sorteio)
+            break;
+        }else{
+            mostra('TENTE DE NOVO ' + sorteio)
+        }
+    }
+
+</script>
+</html>
