@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <h1>DOM</h1>
+    <p>Treinando DOM</p>
+    <div id="dom">
+        <p>DOM É MUITO MANEIRO</p>
+        <a href="#">ACESSAR LINK</a>
+    </div>
+
+    <script>
+        var color = window.document.querySelector('body')
+        color.style.background = '#d6ceea'
+
+        var colorTitulo = window.document.querySelector('h1')
+        colorTitulo.innerHTML = 'Cara você É FERA'
+
+        var mudaFonte = window.document.querySelectorAll('p')
+        color.style.fontSize = '20px'
+
+        var mudaCor = window.document.getElementById('dom')
+        mudaCor.style.color = 'white'
+        mudaCor.style.background = '#091e2c'
+
+        var mudaCor2 = window.document.querySelector('a')
+        mudaCor2.style.textDecoration = 'none'
+        mudaCor2.style.color = 'white'
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DETRAN</title>
+</head>
+<body></body>
+    <h1>Sistema de Multas</h1>
+    <input type="number" id="velocidade">
+    <input type="submit" value="Mostrar" onclick="calculo()">
+    <div id="resultado">Resultado</div>
+    <div id="pontos">Pontos na carteira</div>
+
+    <script>
+        function calculo(){
+            var vel1 = document.querySelector('input#velocidade')
+            var resultado1 = document.querySelector('div#resultado')
+            var velocidadeMostra = Number(vel1.value)
+            var pontosNaCarteira = document.querySelector('div#pontos')
+            resultado1.innerHTML = `Sua velocidade é ${velocidadeMostra}`
+            if(velocidadeMostra > 50){
+                resultado1.innerHTML += '<strong> Multado</strong>'
+                pontosNaCarteira.innerHTML += ': 7'
+            } else{
+                resultado1.innerHTML += ' BOA VIAGEM!'
+            }
+        }
+    </script>
+</body>
+</html>

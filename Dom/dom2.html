@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+<style>
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 500px;
+        background-color: black;
+    }
+
+    #dom{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: aquamarine;
+        color: black;
+        width: 350px;
+        height: 350px;
+    }
+</style>
+</head>
+
+<body>
+    <div id="dom" onmouseenter="entrou()" onmouseout="saiu()">
+        <p>Vamos ver o que fazemos com DOM</p>
+    </div>
+    
+    <script>
+
+    addEventListener('click', clicar)
+    var a = document.getElementById('dom')
+    function clicar(){
+        a.style.background = 'red' 
+        a.innerText = 'CLICADO'
+    }    
+
+    function entrou(){
+        a.style.background = 'blue'
+        a.innerText = 'ENTROU'
+    }
+
+    function saiu(){
+        a.style.background = 'green'
+        a.innerText = 'SAIU'
+    }
+
+    </script>
+</body>
+</html>/

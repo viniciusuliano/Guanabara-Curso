@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOMA</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #c9b2f1;
+        }
+
+        h1{
+            color: #c9b2f1;
+            font-size: 40px;
+        }
+
+        #exercicio{
+            width: 300px;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;     
+            flex-direction: column;   
+            background-color: #1f1731;    
+            border-radius: 10px;
+            gap:10px;
+            
+        }
+
+        #tnt1 {
+            border-radius: 10px;
+            background-color: #78767b ;
+            border: none;
+            width: 150px;
+            height: 20px;
+        }
+        #tnt2{
+            border-radius: 10px;
+            background-color: #78767b ;
+            border: none;
+            width: 150px;
+            height: 20px;
+            
+        }
+
+        #soma{
+            border: none;
+            color: white;
+            background-color: #c9b2f1 ;
+            border-radius: 15px;
+            width: 100px;
+            height: 30px;
+            transition: 0.2s;
+        }
+
+        #resultado {
+            color: white;
+        }
+
+        #soma:hover{
+            cursor: pointer;
+            background-color:#bdca6b ;
+            transform: scale(1.1);
+        }
+
+    </style>
+</head>
+<body>
+    <div id="exercicio">
+        <h1>SOMANDO</h1>
+        <input type="number" id="tnt1">
+        <input type="number" id="tnt2">
+        <input type="button" value="SOMA" id="soma" onclick="soma()">
+        <div id="resultado">Resultado</div>
+    </div>
+    <script>
+        function soma(){
+            var a = document.querySelector('input#tnt1')
+            var b = document.querySelector('input#tnt2')
+            var resultadoSoma = document.querySelector('div#resultado')
+            var n1 = Number(a.value)
+            var n2 = Number(b.value)
+            var somar = n1 + n2
+            resultadoSoma.innerHTML = `A SOMA DOS RESULTADOS É ${somar}`        }
+    </script>
+</body>
+</html>

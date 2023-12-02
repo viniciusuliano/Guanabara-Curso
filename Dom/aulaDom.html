@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        body{
+            background-color: rgb(93, 93, 192);
+            color: white;
+            font: normal 30px Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>DOM</h1>
+    <p class="vamos">vamos começar</p>
+    <p>Aprendendo a usar <strong>DOM</strong></p>
+    <div id="teste">clique aqui!</div>
+    <script>
+         var p1 = window.document.getElementsByTagName('p')[0]
+         window.document.write('Escreve assim ' + p1.innerText)
+         document.write(p1.innerHTML)
+         var color = window.document.getElementById('teste')
+         color.style.background = 'Green'
+         var cor = window.document.querySelector('p.vamos')
+         cor.style.color = 'purple'
+    </script>
+</body>
+</html>
